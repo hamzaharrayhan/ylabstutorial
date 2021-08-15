@@ -8,7 +8,7 @@ import 'package:ylabstutorial/views/shoppingPage.dart';
 
 void main() => runApp(MaterialApp(
       title: "Weather App",
-      home: ShoppingPage(),
+      home: Home(),
     ));
 
 class Home extends StatefulWidget {

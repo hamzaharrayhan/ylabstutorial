@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
+import 'package:ylabstutorial/views/shoppingPage.dart';
+
 void main() => runApp(MaterialApp(
       title: "Weather App",
-      home: Home(),
+      home: ShoppingPage(),
     ));
 
 class Home extends StatefulWidget {
@@ -120,9 +123,12 @@ class _HomeState extends State<Home> {
                 )
               ],
             ),
-          ))
+          )),
         ],
       ),
+      floatingActionButton: FloatingActionButton.extended(
+          onPressed: () => Get.to(ShoppingPage()),
+          label: Text("shopping page")),
     );
   }
 }

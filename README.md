@@ -1,16 +1,16 @@
 # ylabstutorial
 
-A new Flutter project.
+In the Second session of Ylabs Developer Bootcamp, I was told to make a Flutter app consisting at minimum of 4 widgets.
+I made a realtime Weather App for my city, Bogor. This is my very first ever mobile application I made using Flutter.
 
-## Getting Started
+The Widgets I use are listed below:
+- Scaffold
+- Collumn
+- Padding
+- Text
+- Expanded
+- ListView
+- ListTile
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+And above all tasks given for us, I also learn about open source API fetching for the realtime weather information. 
+![image](https://user-images.githubusercontent.com/61260701/128986676-35ddd004-9502-4413-ba2c-fc9bed16f83a.png)

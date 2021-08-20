@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:ylabstutorial/controllers/cartController.dart';
 import 'package:ylabstutorial/controllers/shoppingController.dart';
 import 'package:ylabstutorial/main.dart';
+import 'package:ylabstutorial/views/storepage.dart';
 
 class ShoppingPage extends StatelessWidget {
   final shoppingController = Get.put(ShoppingController());
@@ -12,6 +13,22 @@ class ShoppingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.teal,
+        appBar: AppBar(
+          backgroundColor: Colors.white,
+          elevation: 0,
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back_ios),
+            color: Colors.black,
+            onPressed: () => Get.to(Home()),
+          ),
+          actions: [
+            IconButton(
+              onPressed: () => Get.to(StorePage()),
+              icon: Icon(Icons.shopping_cart),
+              color: Colors.black,
+            )
+          ],
+        ),
         body: SafeArea(
             child: Column(
           children: [

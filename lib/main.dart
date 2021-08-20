@@ -5,10 +5,11 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 import 'package:ylabstutorial/views/shoppingPage.dart';
+import 'package:ylabstutorial/views/storepage.dart';
 
-void main() => runApp(MaterialApp(
+void main() => runApp(GetMaterialApp(
       title: "Weather App",
-      home: Home(),
+      home: StorePage(),
     ));
 
 class Home extends StatefulWidget {

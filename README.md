@@ -12,7 +12,12 @@ The Widgets I use are listed below:
 - ListView
 - ListTile
 
-And above all tasks given for us, I also learn about open source API fetching using Flutter for the realtime weather information. 
-![image](https://user-images.githubusercontent.com/61260701/128986676-35ddd004-9502-4413-ba2c-fc9bed16f83a.png)
+And above all tasks given for us, I also learn about open source **API fetching** using Flutter for the realtime weather information. 
 
-Update third session, I'm using GetX for navigation and state management. And for fourth session, I have already implement API fetching in the second session task :), but I'll try to use another form of API fetching, prolly finished on 18 aug 21. Thankss
+In the third session, I'm using **GetX for navigation and state management**. 
+
+In the fourth session, I implement API fetching again with different approach than that has previously done in the second session task :).
+I'm using API from:
+http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline
+
+And with the help of https://app.quicktype.io/, to make the models.

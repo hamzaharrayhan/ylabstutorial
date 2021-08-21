@@ -3,11 +3,12 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ylabstutorial/views/shoppingPage.dart';
 import 'package:ylabstutorial/views/storepage.dart';
 
 void main() => runApp(GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       title: "Weather App",
       home: StorePage(),
     ));
@@ -48,88 +49,92 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        children: <Widget>[
-          Container(
-            height: MediaQuery.of(context).size.height / 3,
-            width: MediaQuery.of(context).size.width,
-            color: Colors.red,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                Padding(
-                  padding: EdgeInsets.only(bottom: 10),
-                  child: Text(
-                    "Currently in Bogor",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 14.0,
-                      fontWeight: FontWeight.w600,
+    return ScreenUtilInit(
+      designSize: Size(360, 690),
+      builder: () => Scaffold(
+        body: Column(
+          children: <Widget>[
+            Container(
+              height: MediaQuery.of(context).size.height / 3,
+              width: MediaQuery.of(context).size.width,
+              color: Colors.red,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Padding(
+                    padding: EdgeInsets.only(bottom: 10),
+                    child: Text(
+                      "Currently in Bogor",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 14.0,
+                        fontWeight: FontWeight.w600,
+                      ),
                     ),
                   ),
-                ),
-                Text(
-                  temp != null ? temp.toString() + "\u00B0F" : "Loading...",
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 40,
-                      fontWeight: FontWeight.w600),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(bottom: 10.0),
-                  child: Text(
-                    currently != null ? currently.toString() : "Loading...",
+                  Text(
+                    temp != null ? temp.toString() + "\u00B0F" : "Loading...",
                     style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 14.0,
-                      fontWeight: FontWeight.w600,
+                        color: Colors.white,
+                        fontSize: 40,
+                        fontWeight: FontWeight.w600),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(bottom: 10.0),
+                    child: Text(
+                      currently != null ? currently.toString() : "Loading...",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 14.0,
+                        fontWeight: FontWeight.w600,
+                      ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-          Expanded(
-              child: Padding(
-            padding: EdgeInsets.all(20),
-            child: ListView(
-              children: [
-                ListTile(
-                  leading: FaIcon(FontAwesomeIcons.thermometerHalf),
-                  title: Text("Temperature"),
-                  trailing: Text(temp != null
-                      ? temp.toString() + "\u00B0F"
-                      : "Loading..."),
-                ),
-                ListTile(
-                  leading: FaIcon(FontAwesomeIcons.cloud),
-                  title: Text("Weather"),
-                  trailing: Text(description != null
-                      ? description.toString()
-                      : "Loading..."),
-                ),
-                ListTile(
-                  leading: FaIcon(FontAwesomeIcons.sun),
-                  title: Text("Humidity"),
-                  trailing: Text(
-                      humidity != null ? humidity.toString() : "Loading..."),
-                ),
-                ListTile(
-                  leading: FaIcon(FontAwesomeIcons.wind),
-                  title: Text("Wind Speed"),
-                  trailing: Text(
-                      windspeed != null ? windspeed.toString() : "Loading..."),
-                )
-              ],
-            ),
-          )),
-        ],
+            Expanded(
+                child: Padding(
+              padding: EdgeInsets.all(20),
+              child: ListView(
+                children: [
+                  ListTile(
+                    leading: FaIcon(FontAwesomeIcons.thermometerHalf),
+                    title: Text("Temperature"),
+                    trailing: Text(temp != null
+                        ? temp.toString() + "\u00B0F"
+                        : "Loading..."),
+                  ),
+                  ListTile(
+                    leading: FaIcon(FontAwesomeIcons.cloud),
+                    title: Text("Weather"),
+                    trailing: Text(description != null
+                        ? description.toString()
+                        : "Loading..."),
+                  ),
+                  ListTile(
+                    leading: FaIcon(FontAwesomeIcons.sun),
+                    title: Text("Humidity"),
+                    trailing: Text(
+                        humidity != null ? humidity.toString() : "Loading..."),
+                  ),
+                  ListTile(
+                    leading: FaIcon(FontAwesomeIcons.wind),
+                    title: Text("Wind Speed"),
+                    trailing: Text(windspeed != null
+                        ? windspeed.toString()
+                        : "Loading..."),
+                  )
+                ],
+              ),
+            )),
+          ],
+        ),
+        floatingActionButton: FloatingActionButton.extended(
+            onPressed: () => Get.to(ShoppingPage()),
+            label: Text("shopping page")),
       ),
-      floatingActionButton: FloatingActionButton.extended(
-          onPressed: () => Get.to(ShoppingPage()),
-          label: Text("shopping page")),
     );
   }
 }

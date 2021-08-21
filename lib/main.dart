@@ -81,12 +81,12 @@ class _HomeState extends State<Home> {
                         fontWeight: FontWeight.w600),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(bottom: 10.0),
+                    padding: EdgeInsets.only(bottom: 10.0.w),
                     child: Text(
                       currently != null ? currently.toString() : "Loading...",
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 14.0,
+                        fontSize: 14.0.sp,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
@@ -96,7 +96,7 @@ class _HomeState extends State<Home> {
             ),
             Expanded(
                 child: Padding(
-              padding: EdgeInsets.all(20),
+              padding: EdgeInsets.all(20.sw),
               child: ListView(
                 children: [
                   ListTile(

@@ -96,7 +96,7 @@ class _HomeState extends State<Home> {
             ),
             Expanded(
                 child: Padding(
-              padding: EdgeInsets.all(20.sw),
+              padding: EdgeInsets.all(20.w),
               child: ListView(
                 children: [
                   ListTile(

@@ -1,6 +1,6 @@
 # ylabstutorial
 
-In the Second session of Ylabs Developer Bootcamp, I was told to make a Flutter app consisting at minimum of 4 widgets.
+In the Second session of Ylabs Developer Bootcamp, I got task to make a Flutter app consisting at minimum of 4 widgets.
 I made a realtime Weather App for my city, Bogor. This is my very first ever mobile application I made using Flutter.
 
 The Widgets I use are listed below:
@@ -21,3 +21,5 @@ I'm using API from:
 http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline
 
 And with the help of https://app.quicktype.io/, to make the models.
+
+For the fifth and sixth (last session in Ylabs developer bootcamp) session, I'm using screenutils widget in order to make the application responsive in any screen size. I'm making a news list, and news content article from open source API. 

@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:get/get.dart';
 import 'package:ylabstutorial/controllers/storecontroller.dart';
+import 'package:ylabstutorial/views/news.dart';
 import 'package:ylabstutorial/views/shoppingPage.dart';
 import 'package:ylabstutorial/views/storeproduct_tile.dart';
 
@@ -23,8 +24,8 @@ class StorePage extends StatelessWidget {
             ),
             actions: [
               IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.shopping_cart),
+                onPressed: () => Get.to(NewsView()),
+                icon: Icon(Icons.book),
                 color: Colors.black,
               )
             ],

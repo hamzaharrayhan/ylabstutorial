@@ -4,13 +4,13 @@ import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ylabstutorial/views/news.dart';
 import 'package:ylabstutorial/views/shoppingPage.dart';
-import 'package:ylabstutorial/views/storepage.dart';
 
 void main() => runApp(GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Weather App",
-      home: StorePage(),
+      home: NewsView(),
     ));
 
 class Home extends StatefulWidget {
